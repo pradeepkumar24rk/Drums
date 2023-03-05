@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=h1, initial-scale=1.0"> -->
+    <title>Drums</title>
+    <style>
+        body
+        {
+            background:linear-gradient(to right,black,white);
+        }
+        .cen{
+            text-align: center;
+            margin-top: 20%;
+        }
+        .cen a{
+            text-decoration: none;
+            background-color: rgba(163, 147, 147, 0.121);
+            padding: 50px;
+            color: white;
+            font-size: 25px;
+        }
+        .thick{
+            text-decoration: none;
+            background-color: rgba(163, 147, 147, 0.121);
+            box-shadow: 5px 6px rgb(53, 221, 62) ;
+            border-radius: 30px;
+            border-color:rgb(53, 221, 62) ;
+            padding: 50px;
+            color:rgb(53, 221, 62);
+            font-size: 25px;
+        }
+
+
+    </style>
+    
+</head>
+<body id="body">
+    <div class="cen">
+        <a class="ar" id="ar" href="#" src="">A</a>
+        <a class="s" id="sr" href="#" src="">S</a>
+        <a class="d" id="dr" href="#" src="">D</a>
+    <a class="f"     id="fr"href="#" src="">F</a>
+    <a class="j" id="jr" href="#" src="">J</a>
+    <a  class="k" id="kr" href="#" src="">K</a>
+    <a class="l"  id="lr" href="#" src="">L</a>
+    <a class="g"  id="gr" href="#" src="">G</a>
+    </div>
+    
+
+</body>
+<script>
+    // var ar=document.getElementsById("ar").innerHTML="HELLO";
+     console.log("hello");
+    //  var back=document.querySelector(".thick");
+    //  back.style.Color='rgb('+Math.round(Math.random()*255)+','+Math.round(Math.random()*255)+','+Math.round(Math.random()*255)+')';
+     var a_r=document.getElementById("ar");
+     var s_r=document.getElementById("sr");
+     var d_r=document.getElementById("dr");
+     var f_r=document.getElementById("fr");
+     var j_r=document.getElementById("jr");
+     var k_r=document.getElementById("kr");
+     var l_r=document.getElementById("lr");
+     var g_r=document.getElementById("gr");
+     document.body.addEventListener('keydown',function(e)
+     {
+        // console.log("keypress");
+        var keycode=e.keyCode;
+        var boom=new Audio();
+        boom.src="boom.wav";
+        var clap=new Audio();
+        clap.src="clap.wav";
+        var hihat=new Audio();
+        hihat.src="hihat.wav";
+        var openhat=new Audio();
+        openhat.src="openhat.wav";
+        var kick=new Audio();
+        kick.src="kick.wav";
+        var ride=new Audio();
+        ride.src="ride.wav";
+        var snare=new Audio();
+        snare.src="snare.wav";
+        var tink=new Audio();
+        tink.src="tink.wav";
+        var tom=new Audio();
+        tom.src="tom.wav";
+        console.log(keycode+"value");
+        if(keycode==65){
+            a_r.classList.add("thick");
+            boom.play();
+        }
+        if(keycode==83){
+            s_r.classList.add("thick");
+            clap.play();
+        }
+        if(keycode==68){
+            d_r.classList.add("thick");
+            hihat.play();
+        }
+        if(keycode==70){
+            f_r.classList.add("thick");
+            openhat.play();
+        }
+        if(keycode==74){
+            j_r.classList.add("thick");
+            kick.play();
+        }
+        if(keycode==75){
+            k_r.classList.add("thick");
+            ride.play();
+        }
+        if(keycode==76){
+            l_r.classList.add("thick");
+            snare.play();
+        }
+        if(keycode==71){
+            g_r.classList.add("thick");
+            tom.play();
+        }
+        
+        
+     });
+     document.body.addEventListener('keyup',function(e)
+     {
+        console.log("keydown");
+        a_r.classList.remove("thick");
+        s_r.classList.remove("thick");
+        d_r.classList.remove("thick");
+        f_r.classList.remove("thick");
+        g_r.classList.remove("thick");
+        j_r.classList.remove("thick");
+        k_r.classList.remove("thick");
+        l_r.classList.remove("thick");
+    
+
+     });
+    
+     
+    
+
+</script>
+</html>
